@@ -47,3 +47,4 @@ Strongest signals in the logistic model: number of visit days, outpatient and ph
 ## Run
 
 `pip install -r requirements.txt`, then `make run` (writes `out/report.json` and `out/decisions.csv`) and `make test`. Code: `healthy/features.py` (point-in-time features), `healthy/model.py`, `healthy/underwriting.py`, `healthy/run.py`.
+# healthy
