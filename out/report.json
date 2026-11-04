@@ -1,0 +1,93 @@
+{
+ "applicants": 296,
+ "positives": 67,
+ "incidence": 0.2264,
+ "models": {
+  "baseline_age_and_chronic_count": {
+   "auc": 0.7633,
+   "brier": 0.1479,
+   "top_decile_rate": 0.5862,
+   "top_decile_lift": 2.5898,
+   "auc_repeat_min": 0.752,
+   "auc_repeat_max": 0.7674,
+   "auc_bootstrap_95ci": [
+    0.688,
+    0.831
+   ]
+  },
+  "logistic_no_diabetes_code": {
+   "auc": 0.8714,
+   "brier": 0.1217,
+   "top_decile_rate": 0.7931,
+   "top_decile_lift": 3.5039,
+   "auc_repeat_min": 0.8502,
+   "auc_repeat_max": 0.8835
+  },
+  "logistic_full": {
+   "auc": 0.871,
+   "brier": 0.1232,
+   "top_decile_rate": 0.8276,
+   "top_decile_lift": 3.6562,
+   "auc_repeat_min": 0.8449,
+   "auc_repeat_max": 0.883,
+   "auc_bootstrap_95ci": [
+    0.821,
+    0.912
+   ]
+  },
+  "boosted_full": {
+   "auc": 0.8698,
+   "brier": 0.1193,
+   "top_decile_rate": 0.7241,
+   "top_decile_lift": 3.1992,
+   "auc_repeat_min": 0.8625,
+   "auc_repeat_max": 0.8719
+  }
+ },
+ "tiers": [
+  {
+   "action": "PREFERRED",
+   "applicants": 188,
+   "actual_rate": 0.0745,
+   "avg_price_relativity": 0.5886,
+   "avg_cost": 740.8511
+  },
+  {
+   "action": "RATED",
+   "applicants": 20,
+   "actual_rate": 0.45,
+   "avg_price_relativity": 1.3163,
+   "avg_cost": 2946.5
+  },
+  {
+   "action": "REFER",
+   "applicants": 59,
+   "actual_rate": 0.6102,
+   "avg_price_relativity": 2.1372,
+   "avg_cost": 5846.2712
+  },
+  {
+   "action": "STANDARD",
+   "applicants": 29,
+   "actual_rate": 0.2759,
+   "avg_price_relativity": 0.9833,
+   "avg_cost": 2197.2414
+  }
+ ],
+ "cost_model": {
+  "avg_cost_if_diabetes": 5724.03,
+  "avg_cost_if_not": 975.33
+ },
+ "top_coefficients_standardized": {
+  "visit_days": 0.774,
+  "outpatient_claims": 0.733,
+  "carrier_claims": 0.689,
+  "dx_hypertension": 0.462,
+  "sp_strketia": -0.409,
+  "rx_cost": 0.315,
+  "inpatient_stays": -0.242,
+  "age": 0.218,
+  "sp_osteoprs": -0.21,
+  "sp_chf": -0.181
+ }
+}
